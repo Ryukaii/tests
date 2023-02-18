@@ -10,7 +10,7 @@ const fileUpload = require('express-fileupload');
 const axios = require('axios');
 const mime = require('mime-types');
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8080;
 
 const app = express();
 const server = http.createServer(app);
@@ -99,7 +99,7 @@ client.on('message', msg => {
 
         // Get the file extension by mime-type
         const extension = mime.extension(media.mimetype);
-        
+
         // Filename: change as you want! 
         // I will use the time for this example
         // Why not use media.filename? Because the value is not certain exists
@@ -109,7 +109,7 @@ client.on('message', msg => {
 
         // Save to file
         try {
-          fs.writeFileSync(fullFilename, media.data, { encoding: 'base64' }); 
+          fs.writeFileSync(fullFilename, media.data, { encoding: 'base64' });
           console.log('File downloaded successfully!', fullFilename);
         } catch (err) {
           console.log('Failed to save the file:', err);
