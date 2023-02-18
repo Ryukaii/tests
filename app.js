@@ -43,7 +43,6 @@ app.get('/', (req, res) => {
 const client = new Client({
   restartOnAuthFail: true,
   puppeteer: {
-	executablePath: process.env.CHROMIUM_PATH,
     headless: true,
     args: [
       '--no-sandbox',
