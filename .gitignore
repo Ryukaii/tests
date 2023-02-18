@@ -3,3 +3,7 @@ whatsapp-session*.json
 package-lock.json
 downloaded-media/
 .wwebjs_auth
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
